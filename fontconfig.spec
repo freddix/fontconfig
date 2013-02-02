@@ -1,12 +1,12 @@
 Summary:	Font configuration and customization tools
 Name:		fontconfig
-Version:	2.10.91
+Version:	2.10.2
 Release:	1
 Epoch:		1
 License:	MIT
 Group:		Libraries
 Source0:	http://fontconfig.org/release/%{name}-%{version}.tar.gz
-# Source0-md5:	0a8edc63aa79377b2bf44e469d5bbbb7
+# Source0-md5:	025e08b3d7fe45c433de5718e441ed15
 Source1:	%{name}-lcd-filter.conf
 Patch0:		%{name}-blacklist.patch
 URL:		http://fontconfig.org/
