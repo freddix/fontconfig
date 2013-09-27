@@ -1,14 +1,13 @@
 Summary:	Font configuration and customization tools
 Name:		fontconfig
-Version:	2.10.2
-Release:	1
+Version:	2.10.95
+Release:	2
 Epoch:		1
 License:	MIT
 Group:		Libraries
 Source0:	http://fontconfig.org/release/%{name}-%{version}.tar.gz
-# Source0-md5:	025e08b3d7fe45c433de5718e441ed15
+# Source0-md5:	09bb3c3469c3453d4d5c39f66f8a8aac
 Source1:	%{name}-lcd-filter.conf
-Patch0:		%{name}-blacklist.patch
 URL:		http://fontconfig.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -47,7 +46,6 @@ use these fontconfig.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -117,7 +115,6 @@ HOME=/tmp %{_bindir}/fc-cache -r -s 2>/dev/null || :
 %defattr(644,root,root,755)
 %doc doc/fontconfig-devel/*.html
 %attr(755,root,root) %{_libdir}/libfontconfig.so
-%{_libdir}/libfontconfig.la
 %{_includedir}/fontconfig
 %{_pkgconfigdir}/fontconfig.pc
 
