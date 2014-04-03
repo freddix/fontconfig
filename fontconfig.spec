@@ -1,12 +1,12 @@
 Summary:	Font configuration and customization tools
 Name:		fontconfig
-Version:	2.11.0
+Version:	2.11.1
 Release:	1
 Epoch:		1
 License:	MIT
 Group:		Libraries
 Source0:	http://fontconfig.org/release/%{name}-%{version}.tar.gz
-# Source0-md5:	84278204cd7f36adbea7ad8094e039ac
+# Source0-md5:	e75e303b4f7756c2b16203a57ac87eba
 Source1:	%{name}-lcd-filter.conf
 URL:		http://fontconfig.org/
 BuildRequires:	autoconf
@@ -65,6 +65,8 @@ install -d $RPM_BUILD_ROOT{%{_mandir}/man{1,3,5},/var/cache/fontconfig}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 install -D %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/%{name}/conf.avail/10-lcd-filter.conf
 
