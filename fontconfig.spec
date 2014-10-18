@@ -1,7 +1,7 @@
 Summary:	Font configuration and customization tools
 Name:		fontconfig
 Version:	2.11.1
-Release:	2
+Release:	3
 Epoch:		1
 License:	MIT
 Group:		Libraries
